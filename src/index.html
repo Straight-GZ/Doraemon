@@ -1,58 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Doraemon</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<audio class="audio" src="../music/doraemon.m4a" autoplay="autoplay" ></audio>
-<div class="html"></div>
-<div class="main">
-<div class="hat">
-    <div class="up"></div>
-    <div class="fly"></div>
-    <div class="down"></div>
-</div>
-<div class="head">
-    <div class="face">
-        <div class="eyes right"></div>
-        <div class="eyes left">
-            <div class="y">
-            <div class="x"></div></div>
-        </div>
-        <div class="nose"></div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+			name="viewport"
+		/>
+		<meta content="ie=edge" http-equiv="X-UA-Compatible" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style id="test2"></style>
+		<div id="test"></div>
+		<div class="buttons">
+			<button id="end">结束</button>
+			<button id="pause">暂停</button>
+			<button id="play">播放</button>
+			<button id="slow">慢速</button>
+			<button id="normal">中速</button>
+			<button id="fast">快速</button>
+		</div>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			*::after,
+			.main *::before {
+				box-sizing: border-box;
+			}
+			.main {
+				background: #d4ecf9;
+				min-height: 50vh;
+			}
+			.buttons {
+				position: fixed;
+				top: 0;
+				right: 0;
+				display: flex;
+				flex-direction: column;
+				z-index: 10;
+				margin-top: 10px;
+				margin-right: 10px;
+			}
+			.buttons > button {
+				margin-bottom: 10px;
+				padding: 4px 8px;
+			}
+			#test2 {
+				display: none;
+			}
+			#test {
+				position: fixed;
+				top: 0;
+				height: 50vh;
+				left: 0;
+				width: 100%;
+				border: 1px solid red;
+				overflow-y: auto;
+			}
+			#test::-webkit-scrollbar {
+				display: none;
+			}
+			#html {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 50vh;
+			}
+		</style>
+		<audio
+			class="audio"
+			src="../music/doraemon.m4a"
+			autoplay="autoplay"
+		></audio>
+		<div id="html">
+			<div class="main">
+				<div class="Doraemon">
+					<div class="hat">
+						<div class="up"></div>
+						<div class="fly"></div>
+						<div class="down"></div>
+					</div>
+					<div class="head">
+						<div class="face">
+							<div class="eyes right"></div>
+							<div class="eyes left">
+								<div class="y">
+									<div class="x"></div>
+								</div>
+							</div>
+							<div class="nose"></div>
 
-        <div class="beard leftFirst"></div>
-        <div class="beard rightFirst"></div>
-        <div class="beard leftSec"></div>
-        <div class="beard rightSec"></div>
-        <div class="beard leftThird"></div>
-        <div class="beard rightThird"></div>
-        <div class="center"></div>
-        <div class="mouth">
-            <div class="tongue">
-                <div class="left"></div>
-                <div class="right"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="body">
-    <div class="belly"><div class="bag"></div></div>
-    <div class="bell">
-        <div class="up"></div>
-        <div class="down"></div>
-    </div>
-</div>
-<div class="hand left"></div>
-<div class="hand right"></div>
-<div class="leg left"></div>
-<div class="leg right"></div>
-</div>
-<script src="main.js"></script>
-</body>
+							<div class="beard leftFirst"></div>
+							<div class="beard rightFirst"></div>
+							<div class="beard leftSec"></div>
+							<div class="beard rightSec"></div>
+							<div class="beard leftThird"></div>
+							<div class="beard rightThird"></div>
+							<div class="center"></div>
+							<div class="mouth">
+								<div class="tongue">
+									<div class="left"></div>
+									<div class="right"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="body">
+						<div class="belly">
+							<div class="bag"></div>
+						</div>
+						<div class="bell">
+							<div class="up"></div>
+							<div class="down"></div>
+						</div>
+					</div>
+					<div class="hand left"></div>
+					<div class="hand right"></div>
+					<div class="leg left"></div>
+					<div class="leg right"></div>
+				</div>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
 </html>
